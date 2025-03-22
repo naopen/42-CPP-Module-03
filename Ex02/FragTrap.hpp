@@ -3,13 +3,13 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : virtual public ClapTrap {  // virtual継承を追加
+class FragTrap : public ClapTrap {  // virtual継承は不要
 public:
     FragTrap();
     FragTrap(const std::string& name);
     FragTrap(const FragTrap& other);
     FragTrap& operator=(const FragTrap& other);
-    ~FragTrap();
+    virtual~FragTrap();
 
     void highFivesGuys(void);
 };
