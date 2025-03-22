@@ -5,7 +5,7 @@
 #include <iostream>
 
 class ClapTrap {
-protected:  // privateではなくprotected (Exercise 01以降で継承するため)
+protected:  // privateからprotectedに変更
     std::string _name;
     unsigned int _hitPoints;
     unsigned int _energyPoints;
@@ -16,9 +16,9 @@ public:
     ClapTrap(const std::string& name);
     ClapTrap(const ClapTrap& other);
     ClapTrap& operator=(const ClapTrap& other);
-    virtual ~ClapTrap();  // 派生クラスでoverrideするためvirtualに
+    virtual ~ClapTrap(); // 派生クラスを基底クラスのポインタ経由で適切に解放するため
 
-    virtual void attack(const std::string& target);
+    void attack(const std::string& target);
     void takeDamage(unsigned int amount);
     void beRepaired(unsigned int amount);
 

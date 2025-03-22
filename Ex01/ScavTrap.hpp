@@ -3,7 +3,7 @@
 
 #include "ClapTrap.hpp"
 
-class ScavTrap : virtual public ClapTrap {  // virtual継承を追加
+class ScavTrap : public ClapTrap {  // virtual継承は不要
 public:
     ScavTrap();
     ScavTrap(const std::string& name);
