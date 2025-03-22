@@ -3,7 +3,7 @@
 
 #include "ClapTrap.hpp"
 
-class FragTrap : virtual public ClapTrap {  // virtual継承を追加
+class FragTrap : virtual public ClapTrap {  // 重複した基底クラスの初期化を防ぐ
 public:
     FragTrap();
     FragTrap(const std::string& name);
